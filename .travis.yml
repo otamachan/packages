@@ -2,6 +2,14 @@ sudo: required
 language: general
 script:
 - "./build.sh"
+after_success:
+- cd ${HOME}/.aptly/public
+- git init
+- git config user.name "Travis CI"
+- git config user.email "otamachan@mail.com"
+- git add * --all
+- git commit -m "Publish repository"
+- git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages > /dev/null 2>&1
 env:
   global:
     secure: fd+OodSVoT6etnzDt58jKhNLuIEJcmV9smh6iUdbe0jQsDLF4Moy9gOXfOVPOMjBN1GyFv+eNCnGWtr+J7srkEdQDMcZtwHl0nmcEe7ijVFMwILulfqw/IUC5Opg7xP2gNnLtovOsLWluDIVS12pXD4lOjri2CfDp+276TKHqKwIZ6IYaVQcNGFmU+JruVfqewfDsOJUNCFrtgyI7ewPfsTEpE1TTY8lJZXK3T9hHywARzuIvh9nT616FkU54sMq/MmTVlv+Jla29vn+KWGXsZB0oplPd4f0HNbJS571VaMVb4p+sES34/Dl0abekMmcgkzoaRr82QrsAoh0um/VKH3kgrLmmTlfQE81+1kTpuGHHpgiPz0ImQ7fSpPNkVndd5+pJ/sS240okNEM4UViNFo+NCHTJ6yObRIrkhjlt2UibcrrEdBKPGXAG+nZ3y3a6LL5Sp+XJZgz0nyVyCJocBcEyFgbtLPlXFA4waF7hfuKAxT0jskOgEGOHOnJHAa6Q/tXmAR+FWyIDwP5QNpGMJiYrZgOXFZLWQuY5oTwmFBdWCezqooQ4tjwwxBcIE6B1IHRp24a4tWAyCm4T3WGkZts0oAMXlrtx70tuclw2eo8KRxY7RKK0AottS6Y5MwlCVwWBL4rXrMmMPSIoVBOb+LtXq6QvbEmLwJp03Q+1YI=
