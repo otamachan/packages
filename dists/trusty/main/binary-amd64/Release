@@ -1,0 +1,5 @@
+Origin: otamachan
+Label: ROS indigo
+Archive: trusty
+Architecture: amd64
+Component: main

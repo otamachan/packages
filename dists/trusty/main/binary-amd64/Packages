@@ -1,0 +1,49 @@
+Package: ros-indigo-gazebo7
+Priority: extra
+Section: misc
+Installed-Size: 105544
+Maintainer: Tamaki Nishino <otamachan@gmail.com>
+Architecture: amd64
+Version: 7.4.0-1
+Provides: gazebo7, gazebo7-common, gazebo7-plugin-base, libgazebo7, libgazebo7-dev
+Depends: libtbb-dev, libxml2-dev, libqt4-dev, libqtwebkit-dev, libprotoc-dev, libfreeimage-dev, libprotobuf-dev, libboost-all-dev, freeglut3-dev, libogre-1.8-dev, libtar-dev, libcurl4-openssl-dev, libgts-dev, libusb-1.0-0-dev, libgdal-dev, robot-player-dev, libavformat-dev, libavcodec-dev, libswscale-dev, ros-indigo-sdformat4, libsimbody-dev (>= 3.0.0), libsimbody-dev (<< 4.0.0), libbullet2.82-dev
+Filename: pool/main/r/ros-indigo-gazebo7/ros-indigo-gazebo7_7.4.0-1_amd64.deb
+Size: 49091166
+MD5sum: 0686509f970feb8a378eac610201c614
+SHA1: d7a695e4e9530a3728837dbca24475edb5641a38
+SHA256: 0519bebfae3d4ca724361f760ac6569d4aed0fb1177ef8045691738011c5b509
+SHA512: e5c9e9e969c2179bcc68411e00339873eb9f5ba0f1cbf55c1b04c76a7e4d31b537f00c55cab7f00d1bf58aa0e7d241e778050aa5290febd3c292fa2e21a44f97
+Description: Open Source Robotics Simulator
+ Gazebo is a multi-robot simulator for outdoor environments. Like
+ Stage (part of the Player project), it is capable of simulating a
+ population of robots, sensors and objects, but does so in a
+ three-dimensional world. It generates both realistic sensor feedback
+ and physically plausible interactions between objects (it includes an
+ accurate simulation of rigid-body physics).
+Homepage: http://gazebosim.org
+
+Package: ros-indigo-sdformat4
+Priority: optional
+Section: misc
+Installed-Size: 15213
+Maintainer: Tamaki Nishino <otamachan@gmail.com>
+Architecture: amd64
+Version: 4.2.0-0~trusty1
+Provides: libsdformat4, libsdformat4-dev, sdformat-sdf, sdformat4-doc
+Depends: libboost-system-dev, libboost-filesystem-dev, libboost-program-options-dev, libboost-regex-dev, libboost-iostreams-dev, libtinyxml-dev, libignition-math2-dev
+Filename: pool/main/r/ros-indigo-sdformat4/ros-indigo-sdformat4_4.2.0-0.trusty1_amd64.deb
+Size: 2608662
+MD5sum: da7b845f31d5c216ce2ee439757583d5
+SHA1: 8c3f331c1bc3fda2f42a64ed84e8f9465b5e0c3e
+SHA256: 79774beea99973c4eb792a75b2cb254bac6f9c5843d0c7fb0dfe7ae0b41afdf5
+SHA512: 39f188cf7a3793bbe4f257b7a941ab8b584810c9a3c8dde4969211eb110bd22f9896ed0c20e47ff845889413b5627d43b3b8013af0c63fcb08217f46b58ce17e
+Description: Simulation Description Format (SDF) parser - Development files
+ SDF is an XML file format that describes environments, objects, and robots
+ in a manner suitable for robotic applications. SDF is capable of representing
+ and describing different physic engines, lighting properties, terrain, static
+ or dynamic objects, and articulated robots with various sensors, and acutators.
+ The format of SDF is also described by XML, which facilitates updates and
+ allows conversion from previous versions. A parser is also contained within
+ this package that reads SDF files and returns a C++ interface.
+Homepage: http://sdformat.org
+
